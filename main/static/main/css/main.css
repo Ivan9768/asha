@@ -1,0 +1,77 @@
+body{
+  background: #191919;
+  margin:0 80px ;
+
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* разместите элементы по краям блока хедера */
+  align-items: center; /* выровняйте элементы по вертикали */
+  height: 85px; /* задайте высоту хедера */
+  padding: 10px; /* добавьте отступы для внутреннего пространства */
+  background-color: #191919; /* добавьте фон хедера */
+}
+
+.logo {
+  display: inline-block;
+}
+
+nav {
+  display: inline-block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  transition: transform .6s ease;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+nav ul li:hover, nav ul li a:hover{
+  color: #F580C6;
+  transform: scale(1.1);
+}
+nav ul li a:active {
+  text-decoration: underline;
+}
+nav ul li a:visited {
+  text-decoration: underline;
+}
+/*main*/
+main .features{
+  color: #ffffff;
+  text-align: center;
+}
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 400px; margin: 20px auto;}
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 7px 15px;
+  background: #ffffff; /* начальный цвет градиента */
+  background: linear-gradient(to bottom, #4c9aff, #0062cc); /* градиент от начального цвета к конечному */
+  border: 1px solid #0062cc; /* бордюр толщиной в 1 пиксель и цветом #0062cc */
+  border-radius: 15px; /* скругление углов на 5 пикселей */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* тень со смещением на 10 пикселей и прозрачностью 0.3 */
+}
+
+.button:hover {
+  background: #286090; /* цвет фона при наведении курсора */
+  background: linear-gradient(to bottom, #286090, #204d74); /* градиент от начального цвета к конечному при наведении курсора */
+  border-color: #204d74; /* цвет бордюра при наведении курсора */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* тень со смещением на 10 пикселей и прозрачностью 0.5 при наведении курсора */
+}
