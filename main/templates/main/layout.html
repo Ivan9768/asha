@@ -20,10 +20,9 @@
       <li><a href="{% url 'home' %}">Главная</a></li>
       <li><a href="">Шоу</a></li>
       <li><a href="#">График</a></li>
-      <li><a href="{% url 'rooms_home' %}">Комнаты</a></li>
+      <li><a href="">Комнаты</a></li>
       <li><a href="{% url 'about' %}">О нас</a></li>
-
-      <li><a href="/login/vk-oauth2"><img src="{% static 'main/img/nav_avatar.svg' %}"></a></li>
+      <li><a href="{% url 'social:begin' 'vk-oauth2' %}?next={{ request.path }}"><img src="{% static 'main/img/nav_avatar.svg' %}"></a></li>
     </ul>
   </nav>
 </header>
