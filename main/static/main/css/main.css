@@ -75,3 +75,14 @@ main .features p {max-width: 400px; margin: 20px auto;}
   border-color: #204d74; /* цвет бордюра при наведении курсора */
   box-shadow: 0 0 10px rgba(0,0,0,0.5); /* тень со смещением на 10 пикселей и прозрачностью 0.5 при наведении курсора */
 }
+.button a{
+    color: #fff;
+   text-decoration: none;
+}
+img.user-foto{
+    width: 60px; /* задайте нужный диаметр изображения */
+  height: 60px;
+  object-fit: cover; /* указывает браузеру сохранить пропорции изображения */
+  border-radius: 50%; /* установите радиус скругления 50% для получения круговой формы */
+  border: 2px solid white;
+}

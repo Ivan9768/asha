@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Комнаты{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Комнаты</h1>
+        <a href="{% url 'create_room' %}"><button class="button">Создать комнату</button> </a>
+    </div>
+{% endblock %}

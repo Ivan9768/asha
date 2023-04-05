@@ -3,14 +3,12 @@
 {% block title %}Главная{% endblock %}
 
 {% block content %}
+    {% if user.is_authenticated %}
     <div class="features">
-        <h1>Главная страница</h1>
-        <p>Отгадай все головоломки в течение заданного времени и получи награду! </p>
-        <button class="button">Начать!</button>
-        <h2>Добро пожаловать, {{ user.username }}!</h2>
-        <img src="{{ user.vkuser.photo_url }}" alt="{{ user.vkuser.name }}">
-        <p>{{ user.vkuser.name }}</p>
-        <a href="{% url 'logout' %}">Выйти</a>
-    </div>
+        <h2>Добро пожаловать, {{ user.first_name }}!</h2>
 
+    {% else %}
+        h2>Добро пожаловать на сайт!</h2>
+    {% endif %}
+    </div>
 {% endblock %}

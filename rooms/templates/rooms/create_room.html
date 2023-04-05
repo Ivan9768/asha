@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Создание комнаты{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Создание комнаты</h1>
+        <div class="container_create_room">
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" placeholder="Название" class="form-control"><br>
+                <input type="text" placeholder="Описание" class="form-control"><br>
+                <textarea placeholder="Описание" class="form-control"></textarea><br>
+                <input type="date" class="form-control"><br>
+                <input type="time" class="form-control"><br>
+
+                <button type="submit" class="button">Создать комнату</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

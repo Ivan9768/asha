@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Аккаунт{% endblock %}
+
+{% block content %}
+    <div class="features">
+    <h1>Аккаунт</h1>
+     <p>Ваше имя в ВКонтакте:{{ user.username }}</p>
+        {% if photo_url %}
+            <img src="{{ photo_url }}" alt="User photo"/>
+        {% endif %}
+             <button class="button"><a href="{% url 'logout' %}">Выйти</a></button>
+
+    </div>
+{% endblock %}
