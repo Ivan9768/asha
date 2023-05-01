@@ -6,5 +6,18 @@
     <div class="features">
         <h1>Комнаты</h1>
         <a href="{% url 'create_room' %}"><button class="button">Создать комнату</button> </a>
+        {% for el in rooms %}
+            <div class="alert alert-warning">
+            <h2>{{ el.room_id }}</h2>
+            <h3>{{ el.name }}</h3>
+            <p>{{ el.about }}</p>
+            <p>{{ el.date_show }}</p>
+            <img src="/media/photos/rooms_photos/{{ el.image }}">
+            <form action="{% url 'delete_room' room.id %}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Delete">
+            </form>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

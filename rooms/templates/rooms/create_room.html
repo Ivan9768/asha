@@ -6,14 +6,19 @@
     <div class="features">
         <h1>Создание комнаты</h1>
         <div class="container_create_room">
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                <input type="text" placeholder="Название" class="form-control"><br>
-                <input type="text" placeholder="Описание" class="form-control"><br>
-                <textarea placeholder="Описание" class="form-control"></textarea><br>
-                <input type="date" class="form-control"><br>
-                <input type="time" class="form-control"><br>
-
+                    <span>{{ error }}</span>
+                {{ form.name }}<br>
+                {{ form.about }}<br>
+                {{ form.image }}<br>
+                {{ form.game_place }}<br>
+               <label>Публичная комната</label>
+                {{ form.public }}<br>
+                {{ form.date_show }}<br>
+                 <label>Открытая комната</label>
+                {{ form.access_room }}<br>
+                <br>
                 <button type="submit" class="button">Создать комнату</button>
             </form>
         </div>

@@ -25,14 +25,14 @@
       <li><a href="#">График</a></li>
       <li><a href="{%  url 'rooms_home' %}">Комнаты</a></li>
       <li><a href="{% url 'about' %}">О нас</a></li>
-      <li><a href="{% url 'profile' %}"><img class="user-foto" src="{{ photo_url }}" alt="User photo"/></a></li>
+      <li><a href="{% url 'profile' %}"><img class="user-foto" src="/fotos/user_photos/{{ my_objects.photo_path }}" alt="User photo"/></a></li>
     {% else %}
         <li><a href="{% url 'home' %}">Главная</a></li>
       <li><a href="">Шоу</a></li>
       <li><a href="#">График</a></li>
       <li><a href="/rooms">Комнаты</a></li>
       <li><a href="{% url 'about' %}">О нас</a></li>
-      <li><a href="{% url 'profile' %}"><img src="{% static 'main/img/nav_avatar.svg' %}"></a></li>
+      <li><a href="{% url 'profile' %}"><img src="{% static 'main/img/login.svg' %}"></a></li>
     {% endif %}
 
     </ul>

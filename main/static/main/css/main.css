@@ -80,8 +80,8 @@ main .features p {max-width: 400px; margin: 20px auto;}
    text-decoration: none;
 }
 img.user-foto{
-    width: 60px; /* задайте нужный диаметр изображения */
-  height: 60px;
+    width: 40px; /* задайте нужный диаметр изображения */
+  height: 40px;
   object-fit: cover; /* указывает браузеру сохранить пропорции изображения */
   border-radius: 50%; /* установите радиус скругления 50% для получения круговой формы */
   border: 2px solid white;

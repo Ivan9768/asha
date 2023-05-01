@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
-# import os
+import os
 # from dotenv import load_dotenv
 
 # load_dotenv()
@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'main',
+    'vkauth',
     'rooms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,13 +50,22 @@ INSTALLED_APPS = [
 
 # SOCIAL_AUTH_VK_OAUTH2_KEY = os.environ.get('SOCIAL_AUTH_VK_OAUTH2_KEY')
 # SOCIAL_AUTH_VK_OAUTH2_SECRET = os.environ.get('SOCIAL_AUTH_VK_OAUTH2_SECRET')
-
+SOCIAL_AUTH_VK_OAUTH2_KEY = '51591768'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'uRLVhsmXd8bbPINRMNAM'
 SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
 SOCIAL_AUTH_VK_OAUTH2_EXTRA_DATA = ['first_name', 'last_name', 'photo_max_orig', 'screen_name']
 SOCIAL_AUTH_VK_OAUTH2_REDIRECT_URI = 'http://127.0.0.1:8000/'
 
-AUTH_USER_MODEL = 'main.VKUser'
+AUTH_USER_MODEL = 'vkauth.VKUser'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+# USER_PHOTOS_ROOT = os.path.join(BASE_DIR, 'media/user_photos')
+# USER_PHOTOS_URL = '/user_photos/'
+#
+# ROOM_PHOTOS_ROOT = os.path.join(BASE_DIR, 'media/rooms_photos')
+# ROOM_PHOTOS_URL = '/rooms_photos/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

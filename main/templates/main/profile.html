@@ -6,9 +6,14 @@
     <div class="features">
     <h1>Аккаунт</h1>
      <p>Ваше имя в ВКонтакте:{{ user.username }}</p>
-        {% if photo_url %}
-            <img src="{{ photo_url }}" alt="User photo"/>
-        {% endif %}
+{#        {% if photo_url %}#}
+{#            <img src="{{ photo_url }}" alt="User photo"/>#}
+{#            #}
+{#        {% endif %}#}
+
+        {% for obj in my_objects %}
+        <img src="\fotos\user_photos/{{ obj.photo_path }}" alt="User photo"/>
+        {% endfor %}
              <button class="button"><a href="{% url 'logout' %}">Выйти</a></button>
 
     </div>

@@ -5,8 +5,7 @@
 {% block content %}
     {% if user.is_authenticated %}
     <div class="features">
-        <h2>Добро пожаловать, {{ user.first_name }}!</h2>
-
+        <h2>Добро пожаловать, {{ my_object.first_name }}!</h2>
     {% else %}
         h2>Добро пожаловать на сайт!</h2>
     {% endif %}
